@@ -12,21 +12,9 @@
     { "$ref": "../core/Localization.schema.json" }
   ],
   "properties": {
-    "alert_datetime": {
-      "type": "string",
-      "description": "Date and time of notice creation [UTC, ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
-    },
-    "alert_type": {
-      "enum": ["initial", "update", "retraction"],
-      "description": "Indication of alert sequence if multiple of same type sent"
-    },
-    "id": {
-      "type": "string",
-      "description": "Transient Name Server name if applicable, otherwise a CHIME/FRB internal name"
-    },
     "known_source": {
       "type": "string",
-      "description": "Transient Name Server name of the known source"
+      "description": "Transient Name Server name of the known source (if a repeating FRB source)"
     },
     "snr" : {
       "type": "number",
@@ -62,35 +50,31 @@
     },
     "importance": {
       "type": "string",
-      "description": "."
+      "description": "A machine learning score from 0-1 separating RFI (0) from an astrophysical signal (1)"
     },
     "probability": {
       "type": "string",
-      "description": "."
+      "description": "A score of known source association probability from poorly associated (0) to confidently associated (1)"
     },
     "sampling_time": {
       "type": "string",
-      "description": "."
+      "description": "The time resolution of the real-time FRB search."
     },
     "bandwidth": {
       "type": "string",
-      "description": "."
+      "description": "The bandwidth of the real-time FRB search."
     },
     "centre_frequency": {
       "type": "string",
-      "description": "."
+      "description": "The centre frequency of the real-time FRB search."
     },
     "npol": {
       "type": "string",
-      "description": "."
+      "description": "The number of polarizations of the real-time FRB search."
     },
     "tsys": {
       "type": "string",
-      "description": "."
-    },
-    "pipeline_name": {
-      "type": "string",
-      "description": "."
+      "description": "The system temperature of the real-time FRB search."
     },
     "update_message": {
       "type": "string",
