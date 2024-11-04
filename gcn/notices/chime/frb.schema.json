@@ -1,0 +1,100 @@
+{
+  "$id": "https://gcn.nasa.gov/schema/main/gcn/notices/chime_frb/alert.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CHIME/FRB Alert",
+  "description": "Fast radio burst alert from the Canadian Hydrogen Intensity Mapping Experiment.",
+  "type": "object",
+  "allOf": [
+    { "$ref": "../core/Alert.schema.json" },
+    { "$ref": "../core/Reporter.schema.json" },
+    { "$ref": "../core/Event.schema.json" },
+    { "$ref": "../core/DateTime.schema.json" },
+    { "$ref": "../core/Localization.schema.json" }
+  ],
+  "properties": {
+    "alert_datetime": {
+      "type": "string",
+      "description": "Date and time of notice creation [UTC, ISO 8601], ex YYYY-MM-DDTHH:MM:SS.ssssssZ"
+    },
+    "alert_type": {
+      "enum": ["initial", "update", "retraction"],
+      "description": "Indication of alert sequence if multiple of same type sent"
+    },
+    "id": {
+      "type": "string",
+      "description": "Transient Name Server name if applicable, otherwise a CHIME/FRB internal name"
+    },
+    "known_source": {
+      "type": "string",
+      "description": "Transient Name Server name of the known source"
+    },
+    "snr" : {
+      "type": "number",
+      "description": "Signal-to-noise ratio of the burst"
+    },
+    "dm": {
+      "type": "number",
+      "description": "Dispersion measure of the burst [pc/cm^3]"
+    },
+    "dm_error": {
+      "type": "number",
+      "description": "Error on the dispersion measure [pc/cm^3]"
+    },
+    "dm_gal_ne_2001_max": {
+      "type": "string",
+      "description": "."
+    },
+    "dm_gal_ymw_2016_max": {
+      "type": "string",
+      "description": "."
+    },
+    "trigger_time_error": {
+      "type": "number",
+      "description": "Error on the trigger time [s]"
+    },
+    "trigger_time_inf_freq": {
+      "type": "string",
+      "description": "Time of the trigger at infinite frequency [ISO 8601]"
+    },
+    "trigger_time_inf_freq_error": {
+      "type": "number",
+      "description": "Error on the trigger time at infinite frequency [s]"
+    },
+    "importance": {
+      "type": "string",
+      "description": "."
+    },
+    "probability": {
+      "type": "string",
+      "description": "."
+    },
+    "sampling_time": {
+      "type": "string",
+      "description": "."
+    },
+    "bandwidth": {
+      "type": "string",
+      "description": "."
+    },
+    "centre_frequency": {
+      "type": "string",
+      "description": "."
+    },
+    "npol": {
+      "type": "string",
+      "description": "."
+    },
+    "tsys": {
+      "type": "string",
+      "description": "."
+    },
+    "pipeline_name": {
+      "type": "string",
+      "description": "."
+    },
+    "update_message": {
+      "type": "string",
+      "description": "Message to be included in an update alert"
+    }
+  }
+}
