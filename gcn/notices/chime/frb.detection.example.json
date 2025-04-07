@@ -2,7 +2,7 @@
   "$schema": "https://gcn.nasa.gov/schema/main/gcn/notices/chime/frb.schema.json",
   "alert_type": "initial",
   "trigger_time": "2024-09-18T07:19:10.765268Z",
-  "trigger_time_error": [0.007864319719374001],
+  "trigger_time_error": 0.00786431,
   "id": ["427325191"],
   "snr": 12.698559761047363,
   "ra": 346.77850859547,
@@ -20,5 +20,5 @@
   "bandwidth": 400,
   "npol": 2,
   "tsys": 50,
-  "description": "This alert was generated automatically by the CHIME/FRB Real-time Search Pipeline. Please direct comments, questions, and concerns to Thomas Abbott at thomas.abbott@mail.mcgill.ca."
+  "description": "This alert was generated automatically by the CHIME/FRB Real-time Search Pipeline."
 }
