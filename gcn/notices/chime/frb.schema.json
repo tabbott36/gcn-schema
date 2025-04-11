@@ -37,10 +37,6 @@
       "type": "number",
       "description": "A score of known source association probability from poorly associated (0) to confidently associated (1)"
     },
-    "bandwidth": {
-      "type": "number",
-      "description": "The bandwidth of the real-time FRB search [MHz]"
-    },
     "npol": {
       "type": "number",
       "description": "The number of polarizations of the real-time FRB search"
