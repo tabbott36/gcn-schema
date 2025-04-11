@@ -17,7 +17,6 @@
   "importance": 0.9871308604784662,
   "association_probability": 0.932,
   "sampling_time": 0.983,
-  "spectrum": "wavelength",
   "spectral_center": 600,
   "bandwidth": 400,
   "npol": 2,

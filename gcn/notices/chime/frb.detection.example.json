@@ -15,7 +15,6 @@
   "trigger_time_inf_freq_error": 0.013108099559195993,
   "importance": 0.9871308604784662,
   "sampling_time": 0.983,
-  "spectrum": "wavelength",
   "spectral_center": 600,
   "bandwidth": 400,
   "npol": 2,
